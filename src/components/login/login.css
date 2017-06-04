@@ -1,0 +1,55 @@
+#loginwrapper {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+#loginwrapper h1 {
+  color: red;
+}
+#loginwrapper .login-content {
+  width: 26rem;
+  margin: 0 auto;
+  margin-top: 16rem;
+}
+#loginwrapper .input-style {
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  color: #ffffff;
+  outline: none;
+  padding-left: 0.5rem;
+  border: none;
+  background-color: transparent;
+}
+#loginwrapper .login-line {
+  width: 24rem;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 1rem auto;
+}
+#loginwrapper .login-input-outer {
+  border-bottom: 1px solid #ffffff;
+}
+#loginwrapper .login-tips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#loginwrapper .login-tips span {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+#loginwrapper .btn {
+  width: 22rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  line-height: 3rem;
+  text-align: center;
+}
+#loginwrapper .btn-login {
+  margin: 0 auto;
+  background: #006699;
+  color: #ffffff;
+}

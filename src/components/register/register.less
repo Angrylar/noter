@@ -1,0 +1,58 @@
+@white: #ffffff;
+@reginster-blue: #006699;
+@background-black: black;
+#register-wrapper {
+    width: 100%;
+    height: 100%;
+    background: @background-black;
+    h1 {
+        color: red;
+    }
+    .reginster-content {
+        width: 26rem;
+        margin: 0 auto;
+        margin-top: 15rem;
+    }
+    .input-style {
+        width: 100%;
+        height: 100%;
+        line-height: 100%;
+        color: @white;
+        outline: none;
+        padding-left: 0.5rem;
+        border: none;
+        background-color: transparent;
+    }
+    .reginster-line {
+        width: 24rem;
+        height: 3rem;
+        line-height: 3rem;
+        margin: 0 auto;
+    }
+    .reginster-input-outer {
+        border-bottom: 1px solid @white;
+    }
+    .reginster-tips {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        span {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            color: @white;
+            font-size: 0.8rem;
+        }
+    }
+    .btn {
+        width: 22rem;
+        height: 3rem;
+        border-radius: 0.3rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+    .btn-reginster {
+        margin: 0 auto;
+        background: @reginster-blue;
+        color: @white;
+    }
+}
