@@ -1,36 +1,39 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios'
-
+import baseUrl from './baseUrl.js'
 
 Vue.use(Vuex);
-const state = {
-  loginAccountNum:'123',
-  loginPassword: 'sa'
-};
-const mutations = {
-  changeLoginAccountNum (state, accountNum) {
-    state.loginAccountNum = accountNum;
-  }
-};
-const actions = {
-  login: function (accountNum, password) {
-    // axios({
-    //   method: 'POST',
-    //   url: '',
-    //   data: {
-    //     accountNum: accountNum,
-    //     password,password
-    //   }
-    // }).then(function (resp) {
-    //   console.log(resp)
-    // })
-    console.log(accountNum)
-  }
-};
 
-Vuex.Store({
-  state,
-  actions,
-  mutations
+const store = new Vuex.Store({
+	state: {
+		loginKey: '',
+		loginAccountNum: '',
+		loginPassword: '',
+		registerAccountNum: '',
+		registerPassword: ''
+	},
+	mutations: {
+		setLoginKey(state, msg) {
+			state.loginKey = msg;
+		},
+		loginMsg(state, msg) {
+			state.loginAccountNum = msg.loginAccountNum;
+			state.loginPassword = msg.loginPassword;
+		}
+	},
+	actions: {
+		loginFunction(context) {
+			axios({
+				method: "POST",
+				url: baseUrl.BASEAPI + 'note/login',
+				data: {
+					accountNo: context.state.loginAccountNum,
+					password: context.state.loginPassword
+				}
+			})
+		}
+	}
 });
+
+export default store
