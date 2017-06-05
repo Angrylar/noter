@@ -1,6 +1,6 @@
 <style lang='less'>
   @import url('./login.less');
-  
+
 </style>
 <template>
   <div id="loginwrapper">

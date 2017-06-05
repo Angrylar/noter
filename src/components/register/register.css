@@ -4,9 +4,9 @@
   background: black;
 }
 #register-wrapper h1 {
-  color: red;
+  color: blue;
 }
-#register-wrapper .reginster-content {
+#register-wrapper .register-content {
   width: 26rem;
   margin: 0 auto;
   margin-top: 15rem;
@@ -21,21 +21,21 @@
   border: none;
   background-color: transparent;
 }
-#register-wrapper .reginster-line {
+#register-wrapper .register-line {
   width: 24rem;
   height: 3rem;
   line-height: 3rem;
   margin: 0 auto;
 }
-#register-wrapper .reginster-input-outer {
+#register-wrapper .register-input-outer {
   border-bottom: 1px solid #ffffff;
 }
-#register-wrapper .reginster-tips {
+#register-wrapper .register-tips {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#register-wrapper .reginster-tips span {
+#register-wrapper .register-tips span {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   color: #ffffff;
@@ -48,7 +48,7 @@
   line-height: 3rem;
   text-align: center;
 }
-#register-wrapper .btn-reginster {
+#register-wrapper .btn-register {
   margin: 0 auto;
   background: #006699;
   color: #ffffff;
