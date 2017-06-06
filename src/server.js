@@ -55,6 +55,8 @@ export default {
     },
     getNoteList(params){
         return fetchPost('/notelist', params);
+    },
+    getPreviewInfo(params) {
+        return fetchPost('/notedetail', params);
     }
-
 }

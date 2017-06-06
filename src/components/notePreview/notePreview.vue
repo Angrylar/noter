@@ -4,14 +4,12 @@
 <template>
     <div id="notepreview">
         <div class="notepreview-header">
-            <div class="back-btn"></div>
+            <div class="back-btn" @click='goback()'></div>
             <p>{{noteTittle}}</p>
-            <div class="edit-note"></div>
+            <div class="edit-note" @click='editIt()'></div>
         </div>
         <div class="notepreview-content">
-            <ul>
-                <li></li>
-            </ul>
+            <p>{{noteDetail}}</p>
         </div>
     </div>
 </template>

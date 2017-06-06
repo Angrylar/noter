@@ -15,7 +15,7 @@
                 </li>
             </ul>
         </div>
-        <div class="add-new-note"></div>
+        <div class="add-new-note" @click='addNewNote()'></div>
     </div>
 </template>
 

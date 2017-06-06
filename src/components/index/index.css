@@ -1,0 +1,65 @@
+#index {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+#index .index-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 3rem;
+}
+#index .index-header .app-name {
+  line-height: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  color: #0fe2b8;
+}
+#index .index-header .searcher-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  background: #2ecc71;
+}
+#index .index-main {
+  display: flex;
+  flex: 1;
+  background: #ffca45;
+}
+#index .index-main ul {
+  width: 100%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+#index .index-main ul li {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 1.5rem;
+}
+#index .index-main ul li .note-tittle {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+#index .index-main ul li .modify-time {
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  color: gray;
+}
+#index .add-new-note {
+  position: absolute;
+  left: 50%;
+  bottom: 4rem;
+  width: 6rem;
+  height: 6rem;
+  margin-left: -3rem;
+  border-radius: 50%;
+  background: #2ecc71;
+}

@@ -1,0 +1,30 @@
+#notepreview {
+  width: 100%;
+  height: 100%;
+}
+#notepreview .notepreview-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background: red;
+}
+#notepreview .notepreview-header .back-btn {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  background: black;
+}
+#notepreview .notepreview-header p {
+  flex: 1;
+  text-align: center;
+}
+#notepreview .notepreview-header .edit-note {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  background: black;
+}
