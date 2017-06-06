@@ -6,6 +6,7 @@ import login from '@/components/login/login.vue'
 import newNote from '@/components/newNote/newNote.vue'
 import notePreview from '@/components/notePreview/notePreview.vue'
 import register from '@/components/register/register.vue'
+import resetPassword from '@/components/resetPassword/resetPassword.vue'
 import userCenter from '@/components/userCenter/userCenter.vue'
 
 Vue.use(Router)
@@ -35,6 +36,10 @@ export default new Router({
     path: '/register',
     name: 'register',
     component: register
+  }, {
+    path: '/resetPassword',
+    name: 'resetPassword',
+    component: resetPassword
   }, {
     path: '/userCenter',
     name: 'userCenter',

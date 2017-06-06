@@ -1,0 +1,39 @@
+@headerbackground: red;
+@headerimg: black;
+
+#notepreview{
+    width: 100%;
+    height: 100%;
+
+    .notepreview-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        background: @headerbackground;
+
+        .user-head-img{
+            width: 2rem;
+            height: 2rem;
+            margin-left: 0.5rem;
+            border-radius: 50%;
+            background: @headerimg;
+        }
+
+        p{
+            flex: 1;
+            text-align: center
+        }
+
+        .edit-note{
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+            background: @headerimg;
+        }
+    }
+
+
+}

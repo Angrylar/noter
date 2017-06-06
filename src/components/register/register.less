@@ -1,17 +1,38 @@
 @white: #ffffff;
 @register-blue: #006699;
-@background-black: black;
+@background-black: #000000;
+@logo: #2ecc71;
 #register-wrapper {
+    position: relative;
     width: 100%;
     height: 100%;
     background: @background-black;
     h1 {
         color: blue;
     }
+    .error-info-bar{
+        position: absolute;
+        width: 100%;
+        top: 42rem;
+        z-index: 10;
+        height: 4rem;
+        line-height: 4rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: @white;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .logo{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        background: @logo;
+        margin: 0 auto;
+    }
     .register-content {
         width: 26rem;
         margin: 0 auto;
-        margin-top: 15rem;
+        margin-top: 8rem;
     }
     .input-style {
         width: 100%;
@@ -27,7 +48,7 @@
         width: 24rem;
         height: 3rem;
         line-height: 3rem;
-        margin: 0 auto;
+        margin: 1rem auto;
     }
     .register-input-outer {
         border-bottom: 1px solid @white;
@@ -44,15 +65,10 @@
         }
     }
     .btn {
+        display: block;
         width: 22rem;
         height: 3rem;
-        border-radius: 0.3rem;
-        line-height: 3rem;
         text-align: center;
-    }
-    .btn-register {
         margin: 0 auto;
-        background: @register-blue;
-        color: @white;
     }
 }

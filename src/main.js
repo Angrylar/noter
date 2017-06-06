@@ -6,8 +6,10 @@ import router from './router'
 import axios from 'axios'
 import Vuex from 'vuex'
 import store from './store/store.js'
+// import Validator from 'vue-validator'
 // import commen from './commen/commen.js'
 Vue.use(Vuex);
+// Vue.use(Validator);
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
