@@ -4,9 +4,9 @@
 <template>
     <div id="notepreview">
         <div class="notepreview-header">
-            <div class="back-btn" @click='goback()'></div>
+            <div class="back-btn glyphicon glyphicon-chevron-left" @click='goback()'></div>
             <p>{{noteTittle}}</p>
-            <div class="edit-note" @click='editIt()'></div>
+            <div class="edit-note glyphicon glyphicon-pencil" @click='editIt()'></div>
         </div>
         <div class="notepreview-content">
             <p>{{noteDetail}}</p>

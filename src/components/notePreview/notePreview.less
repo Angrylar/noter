@@ -1,39 +1,61 @@
-@headerbackground: red;
+@headerbackground: #ffffff;
 @headerimg: black;
 
 #notepreview{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
+    background: #ffca45;
 
     .notepreview-header{
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 2.5rem;
-        line-height: 2.5rem;
+        height: 3rem;
+        line-height: 3rem;
         background: @headerbackground;
 
         .back-btn{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
             width: 2rem;
             height: 2rem;
             margin-left: 0.5rem;
             border-radius: 50%;
-            background: @headerimg;
+            // background: @headerimg;
         }
 
         p{
             flex: 1;
-            text-align: center
+            text-align: center;
         }
 
         .edit-note{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
             width: 2rem;
             height: 2rem;
             margin-right: 0.5rem;
-            background: @headerimg;
         }
     }
-
+    .notepreview-content{
+        flex: 1;
+        margin: 1rem;
+        overflow: hidden;
+        
+        p{
+            width: 105%;
+            max-height: 100%;
+            padding-right: 5%;
+            line-height: 2;
+            overflow-y: scroll;
+        }
+    }
 
 }

@@ -4,18 +4,18 @@
 </style>
 <template>
   <div id="newNote">
-    <div class="newNote-header" @click='goback()'>
-      <div class="back-icon"></div>
+    <div class="newNote-header">
+      <div class="back-icon glyphicon glyphicon-chevron-left" @click='goback()'></div>
       <p>
         背景
       </p>
       <div class="background-pick"></div>
 
-      <div class="submit-note">提交</div>
+      <div class="submit-note" @click='saveNote()'>保存</div>
     </div>
     <div class="newNote-main">
       <div class="note-tittle">
-        <span>tittle:</span>
+        <span>Tittle:</span>
         <input type="text" name="" value="" v-model='noteTittle'>
       </div>
       <div class="note-content">

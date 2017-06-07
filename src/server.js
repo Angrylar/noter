@@ -9,12 +9,12 @@ axios.defaults.baseURL = 'http://127.0.0.1:3000/note';
 
 //POST传参序列化
 axios.interceptors.request.use((config) => {
-    if(config.method  === 'post'){
+    if (config.method === 'post') {
         config.data = qs.stringify(config.data);
     }
     return config;
-},(error) =>{
-     _.toast("错误的传参", 'fail');
+}, (error) => {
+    _.toast("错误的传参", 'fail');
     return Promise.reject(error);
 });
 
@@ -27,7 +27,7 @@ export function fetchPost(url, params) {
                 reject(err);
             })
             .catch((error) => {
-               reject(error)
+                reject(error)
             })
     })
 }
@@ -41,7 +41,7 @@ export function fetchGet(url, params) {
                 reject(err);
             })
             .catch((error) => {
-               reject(error)
+                reject(error)
             })
     })
 }
@@ -53,10 +53,13 @@ export default {
     register(params) {
         return fetchPost('/registe', params);
     },
-    getNoteList(params){
+    getNoteList(params) {
         return fetchPost('/notelist', params);
     },
     getPreviewInfo(params) {
         return fetchPost('/notedetail', params);
+    },
+    postNote(params) {
+        return fetchPost('/editcontent', params);
     }
 }
