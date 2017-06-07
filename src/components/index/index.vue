@@ -4,7 +4,7 @@
 <template>
     <div id="index">
         <div class="index-header">
-            <p class="app-name">笔记</p>
+            <p class="app-name" @click='goSetting()'>笔记</p>
             <p class="searcher-icon"></p>
         </div>
         <div class="index-main">

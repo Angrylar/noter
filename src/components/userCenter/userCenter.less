@@ -1,0 +1,98 @@
+#userCenter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+.userCenter-nav{
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    height: 3rem;
+    background: #ecf0f1;
+    .goback{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        width: 3rem;
+        height: 3rem;
+        margin-left: 0.5rem;
+    }
+    p{
+        flex: 1;
+        line-height: 3rem;
+        text-align: center;
+    }
+    .nothing{
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.5rem;
+    }
+}
+
+    .userCenter-header {
+        margin: 5rem 0;
+        .head-img {
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+            background: blue;
+            margin: 0 auto;
+            input {
+                width: 12rem;
+                height: 12rem;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        }
+    }
+    .userCenter-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .nickname-bar{
+            width: 90%;
+
+            .nickname-content{
+                display: flex;
+                flex-direction: row;
+                height: 3rem;
+
+                span{
+                    width: 3rem;
+                    line-height: 3rem;
+                }
+                input{
+                    flex: 1;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+        }
+
+
+        .userCenter-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            
+            li {
+                width: 100%;
+                height: 4rem;   
+                line-height: 4rem;
+                text-align: left;
+            }
+        }
+    }
+    .logout {
+        width: 85%;
+        height: 3rem;
+        margin: 4rem;
+    }
+}

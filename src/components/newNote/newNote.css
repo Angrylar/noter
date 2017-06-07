@@ -1,7 +1,10 @@
 #newNote {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   height: 100%;
+  background: #ffca45;
 }
 #newNote .newNote-header {
   display: flex;
@@ -9,11 +12,16 @@
   align-items: center;
   width: 100%;
   height: 3rem;
+  background: #ecf0f1;
 }
 #newNote .newNote-header .back-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  background: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
 }
 #newNote .newNote-header p {
   position: relative;
@@ -24,8 +32,51 @@
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
+  margin-right: 0.5rem;
 }
 #newNote .newNote-header .background-pick {
   position: absolute;
   z-index: 10;
+}
+#newNote .newNote-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+#newNote .newNote-main .note-tittle {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 2.5rem;
+  margin: 1rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+#newNote .newNote-main .note-tittle span {
+  width: 3rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+#newNote .newNote-main .note-tittle input {
+  width: 100%;
+  height: 2rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+#newNote .newNote-main .note-content {
+  flex: 1;
+  margin: 1rem;
+  overflow: hidden;
+}
+#newNote .newNote-main .note-content textarea {
+  width: 105%;
+  height: 99%;
+  padding-right: 6%;
+  background-color: transparent;
+  line-height: 2;
+  border: none;
+  outline: none;
+  resize: none;
 }
