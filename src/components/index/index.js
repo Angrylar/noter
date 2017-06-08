@@ -4,7 +4,9 @@ export default {
   name: 'notepreview',
   data() {
     return {
-      noteList: []
+      noteList: [],
+      loadingShow: true,
+      loadingMsg: '正在加载，请稍后...'
     }
   },
   created() {
@@ -18,7 +20,14 @@ export default {
       httpServer.getNoteList(formData)
         .then((resp) => {
           if (resp.code == 10001) {
-            mv.noteList = resp.resultList;
+            if (resp.resultList.length == 0) {
+              console.log('sdf')
+              mv.loadingShow = true;
+              mv.loadingMsg = '您还没有笔记，快快开始添加笔记吧！';
+            } else {
+              mv.loadingShow = false;
+              mv.noteList = resp.resultList;
+            }
           }
         })
         .catch((err) => {
@@ -27,8 +36,16 @@ export default {
     }
     getNoteList();
 
+
+
     // console.log(this.$store.state)
     // console.log(this.$store.state)
+  },
+  mounted() {
+
+    $(document).on('scroll', function() {
+      console.log(';;;;');
+    })
   },
   methods: {
     showPreView: function (nid) {

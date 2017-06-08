@@ -8,12 +8,17 @@
             <p class="searcher-icon"></p>
         </div>
         <div class="index-main">
-            <ul>
-                <li v-for='obj of noteList' @click='showPreView(obj.nid)'>
-                    <span class="note-tittle">{{obj.tittle}}</span>
-                    <span class="modify-time">{{obj.time}}</span>
-                </li>
-            </ul>
+            <div class="index-main-inner">
+                <ul>
+                    <li v-for='obj of noteList' @click='showPreView(obj.nid)'>
+                        <span class="note-tittle">{{obj.tittle}}</span>
+                        <span class="modify-time">{{obj.time}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="loading-bar" v-show='loadingShow'>
+                <p>----{{loadingMsg}}----</p>
+            </div>
         </div>
         <div class="add-new-note" @click='addNewNote()'></div>
     </div>
