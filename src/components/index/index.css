@@ -33,18 +33,21 @@
   overflow: hidden;
   background: #ffca45;
 }
-#index .index-main div {
+#index .index-main .loading-bar p {
+  height: 8rem;
+}
+#index .index-main .index-main-inner {
   width: 105%;
   padding-right: 8%;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-#index .index-main ul {
+#index .index-main .index-main-inner ul {
   width: 100%;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-#index .index-main ul li {
+#index .index-main .index-main-inner ul li {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -53,11 +56,11 @@
   border-bottom: 1px solid #dcdcdc;
   font-size: 1.5rem;
 }
-#index .index-main ul li .note-tittle {
+#index .index-main .index-main-inner ul li .note-tittle {
   flex: 1;
   margin-left: 0.5rem;
 }
-#index .index-main ul li .modify-time {
+#index .index-main .index-main-inner ul li .modify-time {
   margin-right: 0.5rem;
   font-size: 0.8rem;
   color: gray;
@@ -65,7 +68,6 @@
 #index .loading-bar {
   width: 100%;
   height: 4rem;
-  line-height: 4rem;
   text-align: center;
   color: #95a5a6;
 }

@@ -66,6 +66,6 @@ export default {
     return fetchPost('/refreshcontent', params);
   },
   logout(params) {
-    return fetchPost('./exit', params);
+    return fetchPost('/exit', params);
   }
 }
