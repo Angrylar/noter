@@ -34,7 +34,7 @@
   background: #ffca45;
 }
 #index .index-main .loading-bar p {
-  height: 8rem;
+  line-height: 3rem;
 }
 #index .index-main .index-main-inner {
   width: 105%;
