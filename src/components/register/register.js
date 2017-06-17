@@ -42,7 +42,8 @@ export default {
                 if (this.registerPasswordA == this.registerPasswordB) {
                     let formData = {
                         accountNo: this.registerAccountNum,
-                        password: this.registerPasswordA
+                        password: this.registerPasswordA,
+                        rePassword: this.registerPasswordB
                     }
                     httpServer.register(formData)
                         .then((resp) => {

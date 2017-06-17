@@ -60,12 +60,15 @@ export default {
     return fetchPost('/notedetail', params);
   },
   postNote(params) {
-    return fetchPost('/editcontent', params);
+    return fetchPost('/createNote', params);
   },
   refreshNote(params) {
-    return fetchPost('/refreshcontent', params);
+    return fetchPost('/editDetail', params);
   },
   logout(params) {
-    return fetchPost('/exit', params);
+    return fetchPost('/logout', params);
+  },
+  uploadHeadImg(params) {
+    return fetchPost('./uploadImg', params);
   }
 }
