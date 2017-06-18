@@ -12,7 +12,7 @@
     <div class="userCenter-header">
       <div class="head-img">
         <form enctype="multipart/form-data" method="POST">
-          <input @change='uploadHeadImg()' id="file" type="file" name="file" value="">
+          <input @change='uploadHeadImg()'  id="file" type="file" name="file" value="">
         </form>
       </div>
     </div>
@@ -20,7 +20,7 @@
       <div class="nickname-bar">
         <div class="nickname-content">
           <span>昵称：</span>
-          <input type="text">
+          <input type="text" v-model='nickName' @blur='setNickName()'>
         </div>
         <div class="nickname-cover"></div>
       </div>

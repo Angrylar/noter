@@ -70,5 +70,11 @@ export default {
   },
   uploadHeadImg(params) {
     return fetchPost('./uploadImg', params);
+  },
+  getUserInfo(params) {
+    return fetchPost('./userInfo', params);
+  },
+  setNickName(params) {
+    return fetchPost('./setNickName', params);
   }
 }

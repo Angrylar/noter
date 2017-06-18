@@ -4,12 +4,33 @@ export default {
   name: 'userCenter',
   data() {
     return {
-
+      nickName: ''
     }
   },
   created() {
     const vm = this;
-
+    var pullUserInfo = () => {
+      console.log(`loginKey:${vm.$store.state.loginKey}`)
+      var formData = {
+        loginKey: vm.$store.state.loginKey
+      }
+      console.log(formData)
+      httpServer.getUserInfo(formData)
+        .then(function (resp) {
+          if (resp.code == 10001) {
+            console.log('succ')
+            console.log(resp)
+            vm.nickName = resp.result.nickName;
+            vm.$store.commit('setNickName', vm.nickName);
+            $('.head-img').css('background', `url(${resp.result.headImg}) center center no-repeat`).css('background-size', 'cover')
+          } else {
+            console.log(resp)
+          }
+        }).catch(function (err) {
+          console.log(err)
+        })
+    }
+    pullUserInfo();
   },
   methods: {
     goback: function () {
@@ -46,6 +67,7 @@ export default {
       //     console.log(err);
       //   })
       var formData = new FormData();
+      formData.append('loginKey', this.$store.state.loginKey);
       formData.append("file", document.getElementById("file").files[0]);
       $.ajax({
         url: "http://127.0.0.1:3000/note/uploadImg",
@@ -63,13 +85,29 @@ export default {
         success: function (resp) {
           console.log(resp)
           if (resp.code == 10001) {
-            $('.head-img').css('background',`url(${resp.result.url}) center center no-repeat`).css('background-size','cover')
+            $('.head-img').css('background', `url(${resp.result.url}) center center no-repeat`).css('background-size', 'cover')
           }
         },
         error: function () {
           alert("上传失败！");
         }
       });
+    },
+    setNickName: function () {
+      if (this.nickName == this.$store.state.nickName) {
+        console.log('nothing');
+      } else {
+        let formData = {
+          loginKey: this.$store.state.loginKey,
+          nickName: this.nickName
+        }
+        httpServer.setNickName(formData)
+          .then(function (resp) {
+            console.log(resp);
+          }).catch(function (err) {
+            console.log(err);
+          })
+      }
     }
   }
 }

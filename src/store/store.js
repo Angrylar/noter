@@ -15,11 +15,15 @@ const store = new Vuex.Store({
 		nid: sessionStorage.getItem('currentNid') ? sessionStorage.getItem('currentNid') : '',
 		currentTittle: '',
 		currentContent: '',
-		lastPage: sessionStorage.getItem('lastPage') ? sessionStorage.getItem('lastPage') : 'index'
+		lastPage: sessionStorage.getItem('lastPage') ? sessionStorage.getItem('lastPage') : 'index',
+		nickName: ''
 	},
 	mutations: {
 		setLoginKey(state, msg) {
 			state.loginKey = msg;
+		},
+		setNickName(state, msg) {
+			state.nickName = msg;
 		},
 		loginMsg(state, msg) {
 			state.loginAccountNum = msg.loginAccountNum;
