@@ -12,6 +12,11 @@ export default {
 	created() {
 		// console.log(this.$store.state)
 		// console.log(this.$store.state)
+		if (this.$store.state.loginKey) {
+			this.$router.push({name: 'index'});
+		} else {
+			console.log(`you deserve it!`);
+		}
 	},
 	methods: {
 		errBarAnimate: function (msg) {

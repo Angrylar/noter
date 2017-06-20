@@ -32,11 +32,18 @@ export default {
 								vm.loadingShow = true;
 								vm.loadingMsg = '您还没有笔记，快快开始添加笔记吧！';
 							} else {
+
 								vm.loadingShow = false;
 								vm.noteList = (resp.result.resultList);
 								vm.tottlePage = resp.result.page.tottlePage;
 								vm.currentPage = resp.result.page.currentPage;
 							}
+						} else if (resp.code == 10003) {
+							vm.$store.commit('setLoginKey', '');
+							console.log('123')
+							vm.$router.push({
+								name: 'login'
+							})
 						}
 					})
 					.catch((err) => {
@@ -56,7 +63,7 @@ export default {
 		function getNoteList(page) {
 			if (vm.currentPage > vm.tottlePage) {
 				vm.currentPage = parseInt(vm.tottlePage)
-				
+
 			} else {
 				let formData = {
 					loginKey: window.localStorage.getItem('loginKey'),
@@ -87,7 +94,7 @@ export default {
 		$('.index-main-inner').on('scroll', function () {
 			if (($('.index-main-inner ul').height() - $('.index-main-inner').height()) <= $('.index-main-inner').scrollTop()) {
 				console.log('daodila')
-				vm.currentPage = 1+parseInt(vm.currentPage);
+				vm.currentPage = 1 + parseInt(vm.currentPage);
 				console.log(vm.currentPage)
 				getNoteList(vm.currentPage);
 				vm.loadingShow = true;

@@ -3,7 +3,7 @@
 </style>
 <template>
 	<div id="loginwrapper">
-		<p class="error-info-bar">{{loginErrMsg}}</p>
+		<!--<p class="error-info-bar">{{loginErrMsg}}</p>-->
 		<h1>cinima</h1>
 		<div class="login-content">
 			<p class="logo"></p>

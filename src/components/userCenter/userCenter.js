@@ -46,6 +46,7 @@ export default {
       httpServer.logout(formData)
         .then(function (resp) {
           if (resp.code == 10001) {
+            vm.$store.commit('setLoginKey', '');
             vm.$router.push({
               name: 'login'
             })
@@ -70,7 +71,7 @@ export default {
       formData.append('loginKey', this.$store.state.loginKey);
       formData.append("file", document.getElementById("file").files[0]);
       $.ajax({
-        url: "http://127.0.0.1:3000/note/uploadImg",
+        url: "http://10.100.50.19:3000/note/uploadImg",
         type: "POST",
         data: formData,
         /**
@@ -88,12 +89,14 @@ export default {
             $('.head-img').css('background', `url(${resp.result.url}) center center no-repeat`).css('background-size', 'cover')
           }
         },
-        error: function () {
+        error: function (err) {
+          console.log(err)
           alert("上传失败！");
         }
       });
     },
     setNickName: function () {
+      const vm = this;
       if (this.nickName == this.$store.state.nickName) {
         console.log('nothing');
       } else {
@@ -102,8 +105,9 @@ export default {
           nickName: this.nickName
         }
         httpServer.setNickName(formData)
-          .then(function (resp) {
+          .then((resp) => {
             console.log(resp);
+            vm.$store.commit('setNickName', vm.nickName);
           }).catch(function (err) {
             console.log(err);
           })

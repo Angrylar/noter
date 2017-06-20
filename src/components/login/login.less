@@ -1,7 +1,8 @@
 @white: #ffffff;
 @login-blue: #317dd3;
 @background-black: black;
-@logo: #2ecc71;
+// @logo: #2ecc71;
+@logo: url(../../assets/logo.png) no-repeat center center;
 #loginwrapper {
     position: relative;
     width: 100%;
@@ -25,9 +26,10 @@
     .logo{
         width: 12rem;
         height: 12rem;
+        margin: 0 auto;
         border-radius: 50%;
         background: @logo;
-        margin: 0 auto;
+        background-size: contain;
     }
     .login-content {
         width: 26rem;
